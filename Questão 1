@@ -1,0 +1,30 @@
+import java.util.Scanner;
+
+public class SistemaEscolar {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        double[] notas = new double[8];
+
+        // Entrada das notas
+        System.out.println("Informe as 8 notas anuais do aluno:");
+        for (int i = 0; i < 8; i++) {
+            System.out.print("Nota " + (i + 1) + ": ");
+            notas[i] = scanner.nextDouble();
+        }
+
+        // Cálculo das médias bimestrais
+        double media1Bimestre = notas[0];
+        double media2Bimestre = notas[1];
+        double media3Bimestre = notas[2];
+        double media4Bimestre = notas[3];
+
+        // Cálculo das médias semestrais
+        double media1Semestre = (notas[0] + notas[1]) / 2;
+        double media2Semestre = (notas[2] + notas[3]) / 2;
+
+        // Cálculo da média final
+        double mediaFinal = (media1Semestre + media2Semestre) / 2;
+
+        // Saída dos resultados
+        System.out.println("\nResultados:");
+        System.out.println("1º Bimestre: " + notas[0
